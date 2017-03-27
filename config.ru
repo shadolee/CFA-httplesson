@@ -10,4 +10,18 @@ class App           # defines a class named App
     ]
   end
 end
-run App.new        # rack will run the application 
+run App.new        # rack will run the application
+
+
+# require 'rack'
+#  class HelloRack
+#     def call(env)
+#     path = Dir.pwd + env["REQUEST_PATH"]
+#     if File.exist?(path)
+#        [200, {"Content-Type" => "text/html"}, [IO.read(path)]]
+#     else
+#        [404, {"Content-Type" => "text/html"}, ['Unknown File']]
+#       end
+#     end
+#   end
+#   run HelloRack.new
